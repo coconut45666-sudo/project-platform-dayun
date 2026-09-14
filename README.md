@@ -1,4 +1,3 @@
-[Uploading README.md…]()
 # 大运工程协同管理平台
 
 同一项目、两个账户角色。展示账户查看航拍历史、设备、监测数据、数值模拟、项目资料和报告文件；管理账户还可以修改项目与设备信息、维护监测数据、上传断面与报告、修改文件信息及删除恢复。权限由服务端检查。
@@ -16,7 +15,7 @@
 
 ## 本地运行
 
-需要 Node.js 22.13+。在此目录依次执行：
+需要 Node.js 22.13+。先进入仓库中的 `网站源码` 文件夹，再依次执行：
 
 ```text
 npm ci
@@ -39,17 +38,31 @@ node scripts/import-assets.mjs http://127.0.0.1:5173 private-assets
 
 ## 发布与迁移
 
-当前工程使用 Sites。保留 .openai/hosting.json 的 project_id，构建并推送同一源版本后通过 Sites 发布。Sites 为逻辑绑定 DB、BUCKET 分配持久化资源并运行 drizzle 下迁移。PLATFORM_USERS 设为私密环境变量，其值由 create-accounts 脚本生成于 private-assets/PLATFORM_USERS.json。
+本项目部署到自有 Cloudflare Workers，D1 保存业务数据，R2 保存上传文件。GitHub 仓库负责版本管理，实际访问网站应使用 Cloudflare 控制台提供的站点地址。
 
-托管入口受众与平台账号是两层设置：私有站点先验证托管身份；开放站点直接显示平台登录页。项目 API 和文件始终需要平台登录。
+在 Cloudflare 为自己的项目创建 D1 数据库和 R2 存储桶，并在 Workers Builds 中配置：
 
-迁移至自有 Cloudflare 账户时，建立 D1 和 R2，使用 dist/server/wrangler.json 的构建产物作为 Worker 配置，设置实际 name、d1_databases[].database_id 和 r2_buckets[].bucket_name，再设置 PLATFORM_USERS secret、执行 drizzle/*.sql 迁移并部署。生成配置会随 build 重建，需要在每次发布时应用自有绑定。不能使用示例占位数据库 ID。
+| 项目 | 值 |
+| --- | --- |
+| Root directory | `网站源码` |
+| Build command | `node scripts/build-cloudflare.mjs` |
+| Deploy command | `npx wrangler deploy --config dist/server/wrangler.json` |
+| Version command | `npx wrangler versions upload --config dist/server/wrangler.json` |
+| Production branch | `main` |
+
+在 **Builds → Variables and secrets** 填写四个构建变量的实际值：`CF_WORKER_NAME`、`CF_D1_DATABASE_NAME`、`CF_D1_DATABASE_ID`、`CF_R2_BUCKET_NAME`。构建脚本会把这些值写入本次生成的配置，不要把示例文字作为变量值。
+
+账户配置 `PLATFORM_USERS` 应放在 **Settings → Runtime variables and secrets**，类型为 Secret；不要提交到 GitHub。首次生成配置见 `网站源码/scripts/create-accounts.mjs`。
+
+本地发布时，在 `网站源码` 目录设置同样四个环境变量，执行 `npm ci` 和 `node scripts/build-cloudflare.mjs`，然后 `npx wrangler login`。仅当准备了新的空数据库时，执行 `npx wrangler d1 migrations apply DB --remote --config dist/server/wrangler.json`。发布命令为 `npx wrangler deploy --config dist/server/wrangler.json`。已有正式数据库必须核对迁移记录，仅应用尚未执行的迁移；常规网页更新不需要重新初始化数据库或账户。
+
+构建失败和线上运行是两个独立状态。若日志在 Initializing 阶段就显示内部错误，代码尚未开始编译，应先检查 Cloudflare 构建服务；不要因此删除已有 Worker、D1 或 R2。排查参考 [Cloudflare 构建文档](https://developers.cloudflare.com/workers/ci-cd/builds/troubleshoot/)。
 
 PLATFORM_USERS仅用于首次创建账户，已存在的账户不会被环境变量覆盖。上线后在“平台设置”新增账户、修改密码与权限、停用或恢复；修改后旧会话会撤销。数据库、R2和密钥保管配置均需备份，正常源码发布不重置数据。只对新数据库运行全部迁移，已有数据库仅应用新迁移。
 
 ## 统一登录
 
-平台设置保留项目账户和统一登录。签名票据接口及边界详见 `docs/统一登录接入.md`；大平台尚未上线，目前是接入准备。网站不再提供云端AI配置或调用。
+平台设置保留项目账户和统一登录。签名票据接口及边界详见 [统一登录接入说明](网站源码/docs/统一登录接入.md)；大平台尚未上线，目前是接入准备。网站不再提供云端AI配置或调用。
 
 ## 操作
 
@@ -59,4 +72,4 @@ PLATFORM_USERS仅用于首次创建账户，已存在的账户不会被环境变
 
 视频监控等待管理员配置MP4地址或供应商允许嵌入的HTTPS播放页；尚未接入原平台视频，也未内置RTSP/HLS转码。PDF使用浏览器打印。列表最多2000条，通用修改记录显示最近100条，日报修订显示最近50条。
 
-新增代码采用 MIT 许可。业务素材与原工具的权利说明见 THIRD_PARTY_NOTICES.md。
+新增代码采用 MIT 许可。业务素材与原工具的权利说明见 [THIRD_PARTY_NOTICES.md](网站源码/THIRD_PARTY_NOTICES.md)。
