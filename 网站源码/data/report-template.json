@@ -1,0 +1,389 @@
+{
+  "version": 2,
+  "source": "模板.docx",
+  "slots": [
+    {
+      "id": "task",
+      "label": "施工任务",
+      "stage": "basics"
+    },
+    {
+      "id": "work",
+      "label": "当日主要作业",
+      "stage": "demolition"
+    },
+    {
+      "id": "inspection",
+      "label": "巡查重点",
+      "stage": "demolition"
+    },
+    {
+      "id": "completed",
+      "label": "累计拆除范围",
+      "stage": "demolition"
+    },
+    {
+      "id": "water_level",
+      "label": "水位（含单位）",
+      "stage": "drainage"
+    },
+    {
+      "id": "water_change",
+      "label": "与前日相比的水位变化",
+      "stage": "drainage"
+    }
+  ],
+  "fragments": {
+    "demolition.overview": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "font": "仿宋",
+        "bind": "date_cn"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "，项目现场主要开展"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "font": "仿宋",
+        "bind": "slots.work"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "作业，上述作业单位均为中建海峡建设发展有限公司。"
+      }
+    ],
+    "demolition.focus": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "本日顾问专家重点查看"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "font": "仿宋",
+        "bind": "slots.inspection"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "。截止今日，结构拆除完成"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "font": "仿宋",
+        "bind": "slots.completed"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "的梁板和柱拆除，如下图灰色阴影和玫红色阴影所示，今日拆除范围如玫红色阴影所示。"
+      }
+    ],
+    "demolition.conclusion": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "经当日现场巡查，现场未发现结构整体失稳、局部坍塌、构件倾覆或炮机、车辆机械即时失稳倾覆等紧急风险，外架及防护棚整体未见明显倾斜、变形等异常情况。"
+      },
+      {
+        "size": 14.0,
+        "color": "FF0000",
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "建议各方每日会议纪要、设计变更、监测数据更新等信息抄送安全顾问邮箱zgjydy2026@163.com或发至安全顾问联系群。"
+      }
+    ],
+    "drainage.overview": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "font": "仿宋",
+        "bind": "date_cn"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "，现场未开展基坑抽排水作业。经现场查看，基坑内水位标高基本维持在"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "font": "仿宋",
+        "bind": "slots.water_level"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "左右，相较于前日"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "font": "仿宋",
+        "bind": "slots.water_change"
+      },
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "。"
+      }
+    ],
+    "drainage.conclusion": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "经当日现场排查和数据复核，暂未发现明显严重异常补给或基坑内外严重异常水量交换迹象。"
+      },
+      {
+        "size": 14.0,
+        "color": "FF0000",
+        "bold": true,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "地铁安保区域内的水位变化与坑内的水位变化趋势一致且趋向收敛，需要引起重视。建议各方每日会议纪要、设计变更、监测数据更新等信息抄送安全顾问邮箱zgjydy2026@163.com或发至安全顾问联系群。"
+      }
+    ],
+    "task": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": true,
+        "underline": false,
+        "font": "仿宋",
+        "bind": "slots.task"
+      }
+    ],
+    "heading.demolition": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "黑体",
+        "text": "一、拆除作业"
+      }
+    ],
+    "heading.demolition_overview": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "1. 当日拆除作业概况"
+      }
+    ],
+    "heading.issues": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "2. 结构安全意见"
+      }
+    ],
+    "heading.drainage": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "黑体",
+        "text": "二、基坑降排水作业"
+      }
+    ],
+    "heading.drainage_overview": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "1. 当日降排水作业概况"
+      }
+    ],
+    "heading.drainage_safety": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "仿宋",
+        "text": "2. 降排水安全意见"
+      }
+    ],
+    "heading.plans": [
+      {
+        "size": 14.0,
+        "color": "000000",
+        "bold": false,
+        "italic": false,
+        "underline": false,
+        "font": "黑体",
+        "text": "三、次日工作计划"
+      }
+    ],
+    "project": [
+      {
+        "text": "华润置地深圳公司大运G01046-0106宗地DY-01-05地块",
+        "size": 18,
+        "color": "000000",
+        "bold": true,
+        "font": "仿宋",
+        "italic": false,
+        "underline": false
+      }
+    ],
+    "title": [
+      {
+        "text": "结构安全顾问工作日报",
+        "size": 18,
+        "color": "000000",
+        "bold": true,
+        "font": "仿宋",
+        "italic": false,
+        "underline": false
+      }
+    ],
+    "experts": [
+      {
+        "text": "崔云鹏、邱金玲",
+        "size": 12,
+        "color": "000000",
+        "bold": false,
+        "font": "仿宋",
+        "italic": false,
+        "underline": false
+      }
+    ],
+    "signatures.authors": [
+      {
+        "text": "崔云鹏、邱金玲、万文恺",
+        "size": 14,
+        "color": "000000",
+        "bold": false,
+        "font": "仿宋",
+        "italic": false,
+        "underline": false
+      }
+    ],
+    "signatures.reviewers": [
+      {
+        "text": "侯兆新、吴旭君",
+        "size": 14,
+        "color": "000000",
+        "bold": false,
+        "font": "仿宋",
+        "italic": false,
+        "underline": false
+      }
+    ],
+    "signatures.approver": [
+      {
+        "text": "闫贵海",
+        "size": 14,
+        "color": "000000",
+        "bold": false,
+        "font": "仿宋",
+        "italic": false,
+        "underline": false
+      }
+    ]
+  },
+  "numberAnchor": {
+    "date": "2026-08-12",
+    "value": 1,
+    "prefix": "GZRB-"
+  },
+  "page": {
+    "width_mm": 210,
+    "height_mm": 297,
+    "margin_x_mm": 31.75,
+    "margin_y_mm": 25.4
+  },
+  "dynamicTables": [
+    "demolition.issues",
+    "drainage.items",
+    "plans"
+  ]
+}

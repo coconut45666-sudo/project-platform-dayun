@@ -1,0 +1,418 @@
+{
+  "width": 1447,
+  "height": 2048,
+  "coordinateSystem": "Original image pixels, origin top-left, x increases right, y increases down. Point locations are monitoring-symbol centers; section endpoints are centers of the cyan section-marker strokes.",
+  "points": [
+    {
+      "id": "SW1",
+      "type": "SW",
+      "x": 905.5,
+      "y": 278.5
+    },
+    {
+      "id": "SW2",
+      "type": "SW",
+      "x": 1041.75,
+      "y": 271
+    },
+    {
+      "id": "SW3",
+      "type": "SW",
+      "x": 1237,
+      "y": 383
+    },
+    {
+      "id": "SW4",
+      "type": "SW",
+      "x": 1241,
+      "y": 585.5
+    },
+    {
+      "id": "SW5",
+      "type": "SW",
+      "x": 1244.25,
+      "y": 786.75
+    },
+    {
+      "id": "SW6",
+      "type": "SW",
+      "x": 1246,
+      "y": 921.25
+    },
+    {
+      "id": "SW7",
+      "type": "SW",
+      "x": 1247.25,
+      "y": 988.5
+    },
+    {
+      "id": "SW8",
+      "type": "SW",
+      "x": 1252,
+      "y": 1190
+    },
+    {
+      "id": "SW9",
+      "type": "SW",
+      "x": 1044,
+      "y": 1289
+    },
+    {
+      "id": "SW10",
+      "type": "SW",
+      "x": 805.5,
+      "y": 1237
+    },
+    {
+      "id": "SW11",
+      "type": "SW",
+      "x": 549.75,
+      "y": 1168
+    },
+    {
+      "id": "SW12",
+      "type": "SW",
+      "x": 472.75,
+      "y": 955.5
+    },
+    {
+      "id": "SW13",
+      "type": "SW",
+      "x": 420.25,
+      "y": 800.5
+    },
+    {
+      "id": "SW14",
+      "type": "SW",
+      "x": 488.5,
+      "y": 707.5
+    },
+    {
+      "id": "SW15",
+      "type": "SW",
+      "x": 506.25,
+      "y": 551.25
+    },
+    {
+      "id": "SW16",
+      "type": "SW",
+      "x": 601.25,
+      "y": 531.75
+    },
+    {
+      "id": "SW17",
+      "type": "SW",
+      "x": 722.75,
+      "y": 533.25
+    },
+    {
+      "id": "NSW1",
+      "type": "NSW",
+      "x": 852.5,
+      "y": 270.25
+    },
+    {
+      "id": "NSW2",
+      "type": "NSW",
+      "x": 971.25,
+      "y": 268.75
+    },
+    {
+      "id": "NSW3",
+      "type": "NSW",
+      "x": 1121.25,
+      "y": 268.25
+    },
+    {
+      "id": "NSW4",
+      "type": "NSW",
+      "x": 1240.25,
+      "y": 446
+    },
+    {
+      "id": "NSW5",
+      "type": "NSW",
+      "x": 1238.25,
+      "y": 516.75
+    },
+    {
+      "id": "NSW6",
+      "type": "NSW",
+      "x": 1238.75,
+      "y": 648.25
+    },
+    {
+      "id": "NSW7",
+      "type": "NSW",
+      "x": 1239.75,
+      "y": 715.25
+    },
+    {
+      "id": "NSW8",
+      "type": "NSW",
+      "x": 1240.5,
+      "y": 839.75
+    },
+    {
+      "id": "NSW9",
+      "type": "NSW",
+      "x": 1245,
+      "y": 1045.25
+    },
+    {
+      "id": "NSW10",
+      "type": "NSW",
+      "x": 1246.5,
+      "y": 1120.5
+    },
+    {
+      "id": "NSW11",
+      "type": "NSW",
+      "x": 819,
+      "y": 436
+    }
+  ],
+  "sections": [
+    {
+      "id": "1",
+      "label": "1-1",
+      "a": [
+        434.5,
+        700.5
+      ],
+      "b": [
+        674.5,
+        700.5
+      ]
+    },
+    {
+      "id": "2",
+      "label": "2-2",
+      "a": [
+        736.0,
+        491.7
+      ],
+      "b": [
+        735.7,
+        653.3
+      ]
+    },
+    {
+      "id": "3",
+      "label": "3-3",
+      "a": [
+        804.5,
+        464
+      ],
+      "b": [
+        958.5,
+        464.0
+      ]
+    },
+    {
+      "id": "4",
+      "label": "4-4",
+      "a": [
+        978.0,
+        216.0
+      ],
+      "b": [
+        978.0,
+        427.0
+      ]
+    },
+    {
+      "id": "5",
+      "label": "5-5",
+      "a": [
+        1161.6,
+        364.0
+      ],
+      "b": [
+        1301.4,
+        364.2
+      ]
+    },
+    {
+      "id": "6",
+      "label": "6-6",
+      "a": [
+        1179.2,
+        556.8
+      ],
+      "b": [
+        1403.0,
+        557.0
+      ]
+    },
+    {
+      "id": "7",
+      "label": "7-7",
+      "a": [
+        1179.4,
+        772.0
+      ],
+      "b": [
+        1403.0,
+        771.5
+      ]
+    },
+    {
+      "id": "8",
+      "label": "8-8",
+      "a": [
+        1166.7,
+        935.0
+      ],
+      "b": [
+        1403.4,
+        934.6
+      ]
+    },
+    {
+      "id": "9",
+      "label": "9-9",
+      "a": [
+        1101.5,
+        1153.0
+      ],
+      "b": [
+        1403.5,
+        1153.5
+      ]
+    },
+    {
+      "id": "10",
+      "label": "10-10",
+      "a": [
+        1097.8,
+        1249.5
+      ],
+      "b": [
+        1097.6,
+        1321.9
+      ]
+    },
+    {
+      "id": "11",
+      "label": "11-11",
+      "a": [
+        761.8,
+        1113.0
+      ],
+      "b": [
+        723.0,
+        1232.0
+      ]
+    },
+    {
+      "id": "12",
+      "label": "12-12",
+      "a": [
+        295.8,
+        1131.3
+      ],
+      "b": [
+        528.4,
+        1131.5
+      ]
+    },
+    {
+      "id": "13",
+      "label": "13-13",
+      "a": [
+        271.8,
+        982.5
+      ],
+      "b": [
+        528.5,
+        982.5
+      ]
+    },
+    {
+      "id": "14",
+      "label": "14-14",
+      "a": [
+        273.5,
+        834
+      ],
+      "b": [
+        522.5,
+        834
+      ]
+    },
+    {
+      "id": "16",
+      "label": "16-16",
+      "a": [
+        448.6,
+        1058.2
+      ],
+      "b": [
+        448.7,
+        1125.8
+      ]
+    },
+    {
+      "id": "17(15)",
+      "label": "17(15)-17(15)",
+      "a": [
+        414.0,
+        741.5
+      ],
+      "b": [
+        414.0,
+        903.0
+      ]
+    },
+    {
+      "id": "18",
+      "label": "18-18",
+      "a": [
+        155.5,
+        741.5
+      ],
+      "b": [
+        155.5,
+        891
+      ]
+    }
+  ],
+  "sectionReferences": [
+    {
+      "id": "4",
+      "source": "upload/4-4断面.png",
+      "road": "如意路",
+      "planOrientation": "north-south across the northern pit edge",
+      "structure": "大直径排桩 + 2道桁架斜板撑结构"
+    },
+    {
+      "id": "5",
+      "source": "upload/5-5断面.png",
+      "road": "黄阁路",
+      "planOrientation": "east-west across the northeastern pit edge",
+      "structure": "排桩 + 2道桁架斜板撑结构",
+      "adjacentStructure": "地铁右线/左线隧道"
+    }
+  ],
+  "uncertainties": [
+    {
+      "kind": "unlabeled_black_monitoring_symbol",
+      "x": 822,
+      "y": 365,
+      "detail": "An additional black half-filled circular monitoring symbol is visible on the northwest short vertical edge. It has no legible SW label or leader association. It is deliberately not assigned an invented SW ID."
+    },
+    {
+      "kind": "section_alias",
+      "detail": "There are 17 paired cyan numeric sections: 1–14, 16, 17(15), and 18. No separate 15 marker is visible; the literal shared label 17(15) is preserved."
+    },
+    {
+      "kind": "raster_precision",
+      "detail": "Coordinates are measured in the original 1447×2048 raster. Typical center uncertainty is about 1 pixel; SW3, SW4, SW8, and the unlabeled black symbol are partly overdrawn and have about 2 pixel uncertainty. These are image coordinates, not surveyed engineering coordinates."
+    },
+    {
+      "kind": "section_marker_shape",
+      "detail": "Section 14 uses two L-shaped cyan symbols. The a/b coordinates use the centers of their horizontal strokes. Section 9 eastern stroke is faint but its number and pairing are legible."
+    }
+  ]
+}

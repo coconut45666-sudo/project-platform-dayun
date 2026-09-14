@@ -1,0 +1,10 @@
+import {randomBytes,pbkdf2Sync} from 'node:crypto';
+import fs from 'node:fs';
+if(fs.existsSync('.dev.vars')&&!process.argv.includes('--rotate'))throw Error('账户配置已存在。确需更换时使用 --rotate，并结束旧会话。');
+const accounts=[{username:'dayun_view',role:'viewer',displayName:'展示账户'},{username:'dayun_admin',role:'admin',displayName:'管理账户'}].map(x=>({...x,password:randomBytes(18).toString('base64url')}));
+const users=accounts.map(({password,...x})=>{const salt=randomBytes(16).toString('hex');return {...x,salt,hash:pbkdf2Sync(password,Buffer.from(salt,'hex'),100000,32,'sha256').toString('hex')};});
+const configuration=JSON.stringify(users);
+fs.writeFileSync('.dev.vars',"PLATFORM_USERS='"+configuration+"'\n");fs.writeFileSync('.env',"PLATFORM_USERS='"+configuration+"'\n");
+fs.mkdirSync('private-assets',{recursive:true});
+fs.writeFileSync('private-assets/accounts.json',JSON.stringify(accounts,null,2));fs.writeFileSync('private-assets/PLATFORM_USERS.json',configuration);
+console.log('账户信息：private-assets/accounts.json。部署用密钥值：private-assets/PLATFORM_USERS.json。请勿提交这两个文件。');

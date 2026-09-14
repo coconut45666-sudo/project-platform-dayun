@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /$
+Allow: /login$
+Disallow: /api/
+Disallow: /monitor
+Disallow: /devices
+Disallow: /simulation
+Disallow: /documents
+Disallow: /reports
+
+Sitemap: https://dayun-project-platform.coconut45666.chatgpt.site/sitemap.xml
